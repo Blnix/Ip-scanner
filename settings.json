@@ -1,0 +1,8 @@
+{
+    "base_ip": "192.168.1",
+    "start_ip": 1,
+    "end_ip": 255,
+    "max_threads": 20,
+    "ports": [],
+    "timeout": 5
+}
