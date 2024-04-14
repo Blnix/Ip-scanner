@@ -19,3 +19,6 @@ Install the requirements and run the repository.
 
 
     python main.py
+
+## Features
+It not only has Ip and Port scanning with threads, but you can convert a domain to an Ip-address or getting the location. Note that it isnt the exact location, its often wrong, but it gives atleast an overview.
