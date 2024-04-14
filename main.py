@@ -70,18 +70,15 @@ class Ip_scanner:
         print("Launching all threads. This might take a while...")
 
     def loop(self):
-        while True:
+        while self.current_ip == self.end_ip:
             if self.running_threads != self.max_threads and self.running_threads < self.max_threads or self.max_threads == 0:
             
                 self.current_thread += 1
                 threading.Thread(target=self.ping, args=(self.base_ip, self.current_ip, self.ports, self.timeout)).start()
-                if not self.current_ip == self.end_ip:
-                    self.current_ip += 1
-                else:
-                    print("", flush=True)
-                    break
+                self.current_ip += 1
             else:
                 sleep(0.1)
+        print("", flush=True)
 
         if self.done_threads != self.end_ip:
             print("Waiting for threads to finish...")
